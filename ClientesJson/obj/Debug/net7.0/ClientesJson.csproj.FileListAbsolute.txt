@@ -1,0 +1,15 @@
+C:\Users\I\source\repos\ClientesJson\ClientesJson\obj\Debug\net7.0\ClientesJson.csproj.AssemblyReference.cache
+C:\Users\I\source\repos\ClientesJson\ClientesJson\obj\Debug\net7.0\ClientesJson.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\I\source\repos\ClientesJson\ClientesJson\obj\Debug\net7.0\ClientesJson.AssemblyInfoInputs.cache
+C:\Users\I\source\repos\ClientesJson\ClientesJson\obj\Debug\net7.0\ClientesJson.AssemblyInfo.cs
+C:\Users\I\source\repos\ClientesJson\ClientesJson\obj\Debug\net7.0\ClientesJson.csproj.CoreCompileInputs.cache
+C:\Users\I\source\repos\ClientesJson\ClientesJson\bin\Debug\net7.0\ClientesJson.exe
+C:\Users\I\source\repos\ClientesJson\ClientesJson\bin\Debug\net7.0\ClientesJson.deps.json
+C:\Users\I\source\repos\ClientesJson\ClientesJson\bin\Debug\net7.0\ClientesJson.runtimeconfig.json
+C:\Users\I\source\repos\ClientesJson\ClientesJson\bin\Debug\net7.0\ClientesJson.dll
+C:\Users\I\source\repos\ClientesJson\ClientesJson\bin\Debug\net7.0\ClientesJson.pdb
+C:\Users\I\source\repos\ClientesJson\ClientesJson\obj\Debug\net7.0\ClientesJson.dll
+C:\Users\I\source\repos\ClientesJson\ClientesJson\obj\Debug\net7.0\refint\ClientesJson.dll
+C:\Users\I\source\repos\ClientesJson\ClientesJson\obj\Debug\net7.0\ClientesJson.pdb
+C:\Users\I\source\repos\ClientesJson\ClientesJson\obj\Debug\net7.0\ClientesJson.genruntimeconfig.cache
+C:\Users\I\source\repos\ClientesJson\ClientesJson\obj\Debug\net7.0\ref\ClientesJson.dll
