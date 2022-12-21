@@ -33,6 +33,7 @@ internal class Program
                 case 1:
                     var fornecedor = new Fornecedor() {Tipo = "J" };
                     GenericService.CadastrarCliente(fornecedor, clienteLista , "Nome Fantasia", "Cnpj");
+                    GenericService.SerializarClientes(fornecedor, path);
                     break;
 
                 case 2:
@@ -40,10 +41,9 @@ internal class Program
                     GenericService.CadastrarCliente(usuario, clienteLista, "Nome", "Cpf" );
                     break;
                 case 3:
-                    GenericService.SerializarClientes( clienteLista, path);
                     break;
                 case 4:
-                    GenericService.LerArquivos(path, clienteDeserializado);
+                    GenericService.LerArquivos(path, clienteLista);
                     break;
 
                 case 5:

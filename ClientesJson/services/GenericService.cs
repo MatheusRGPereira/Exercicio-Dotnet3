@@ -22,19 +22,19 @@ namespace ClientesJson.services
             iCliente.Documento = Console.ReadLine();
             listaCliente.Add(iCliente);
         }
-        public static void SerializarClientes(List<iCliente> listaCliente, string path)
+        public static void SerializarClientes(iCliente iCliente, string path)
         {
-            string jsonString = JsonSerializer.Serialize(listaCliente);
+            string jsonString = JsonSerializer.Serialize(iCliente);
             using StreamWriter file = new StreamWriter(path, append:true);
             file.WriteLine(jsonString); 
         }
 
-        public static void LerArquivos(string path, List<Cliente> listaCliente )
+        public static void LerArquivos(string path, List<iCliente> listaCliente )
         {
             using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
-                listaCliente = JsonSerializer.Deserialize<List<Cliente>>(json);
+                listaCliente = JsonSerializer.Deserialize<List<iCliente>>(json);
             }
             foreach(var cliente in listaCliente)
             {
