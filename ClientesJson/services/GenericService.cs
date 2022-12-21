@@ -12,7 +12,7 @@ namespace ClientesJson.services
 {
     internal class GenericService
     {
-        public static void CadastrarCliente(iCliente iCliente, List<iCliente> listaCliente , string nomeParaUsuario, string documento)
+        public static void CadastrarCliente(iCliente iCliente, List<iCliente> clienteLista, string nomeParaUsuario, string documento)
         {
             Console.Clear();
             iCliente.Id = DateTime.Now.Microsecond;
@@ -20,7 +20,8 @@ namespace ClientesJson.services
             iCliente.Nome = Console.ReadLine();
             Console.WriteLine($"Digite o {documento} do cliente");
             iCliente.Documento = Console.ReadLine();
-            listaCliente.Add(iCliente);
+            clienteLista.Add(iCliente);
+            Console.Clear();
         }
         public static void SerializarClientes(iCliente iCliente, string path)
         {
@@ -29,18 +30,20 @@ namespace ClientesJson.services
             file.WriteLine(jsonString); 
         }
 
-        public static void LerArquivos(string path, List<iCliente> listaCliente )
+        public static void LerArquivo(string path)
         {
+            Console.Clear();
+            Console.WriteLine("                                               Lista de Clientes Cadastrados\n");
             using (StreamReader r = new StreamReader(path))
             {
-                string json = r.ReadToEnd();
-                listaCliente = JsonSerializer.Deserialize<List<iCliente>>(json);
+                string json;
+                while ((json = r.ReadLine()) != null)
+                 { 
+                    var cliente = JsonSerializer.Deserialize<Cliente>(json);
+                    Console.WriteLine($"                               | Id: {cliente.Id} | Nome:{cliente.Nome} | Documento: {cliente.Documento} | Tipo: {cliente.Tipo} |");
+                    Console.WriteLine("                           ---------------------------------------------------------------------");
+                }
             }
-            foreach(var cliente in listaCliente)
-            {
-                Console.WriteLine(cliente.Nome);
-            }
-            
         }
 
     }

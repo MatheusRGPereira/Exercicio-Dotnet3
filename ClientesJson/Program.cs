@@ -12,20 +12,18 @@ internal class Program
     private static void Main(string[] args)
     {
         List <iCliente> clienteLista = new List<iCliente>();
-        List<Cliente> clienteDeserializado = new List<Cliente>();
         var path = @"C:\\Users\\I\\source\\repos\\ClientesJson\\ClientesJson\\exports\\clientes.json";
         bool menu = true;
 
         while (menu)
         {
-            Console.WriteLine("======= Bem vindo ao Menu =======");
+            Console.WriteLine("                                           ======= Bem vindo ao Menu =======");
             Console.WriteLine("""
-                Digite a opção desejada
-                1- Cadastrar Usuario Juridico
-                2- Cadastrar Usuario Fisico
-                3- Salvar os dados dos clientes
-                4- Listar Usuarios Cadastrados
-                5- sair
+                                                             Digite a opção desejada
+                                                             1- Cadastrar Usuario Juridico
+                                                             2- Cadastrar Usuario Fisico
+                                                             3- Listar Usuarios Cadastrados
+                                                             4- sair
             """);
             int escolhaUsuario = int.Parse(Console.ReadLine());
             switch (escolhaUsuario)
@@ -39,15 +37,18 @@ internal class Program
                 case 2:
                     var usuario = new Usuario() {Tipo = "F"};
                     GenericService.CadastrarCliente(usuario, clienteLista, "Nome", "Cpf" );
+                    GenericService.SerializarClientes(usuario ,path);
                     break;
                 case 3:
-                    break;
-                case 4:
-                    GenericService.LerArquivos(path, clienteLista);
+                    GenericService.LerArquivo(path);
+                    Console.WriteLine("                                          Aperte [ENTER] para voltar ao menu");
+                    Console.ReadKey();
+                    Console.Clear();
                     break;
 
-                case 5:
-                    Console.WriteLine("Obrigada por utilizar nossos serviços");
+                case 4:
+                    Console.Clear();
+                    Console.WriteLine("                                          Obrigada por utilizar nossos serviços");
                     Thread.Sleep(5000);
                     menu = false;
                     break;
