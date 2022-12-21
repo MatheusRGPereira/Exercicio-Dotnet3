@@ -24,7 +24,7 @@ namespace ClientesJson.services
         }
         public static void SerializarClientes(List<iCliente> listaCliente, string path)
         {
-            string jsonString = JsonSerializer.Serialize(iCliente);
+            string jsonString = JsonSerializer.Serialize(listaCliente);
             using StreamWriter file = new StreamWriter(path, append:true);
             file.WriteLine(jsonString); 
         }
